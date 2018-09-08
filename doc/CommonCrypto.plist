@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>OpenSourceLicense</key>
+		<string>openssl</string>
+		<key>OpenSourceImportDate</key>
+		<string>2004-04-07</string>
+		<key>OpenSourceLicenseFile</key>
+		<string>CommonCrypto.txt</string>
+		<key>OpenSourceModifications</key>
+		<string>Extensive customization for OS X</string>
+		<key>OpenSourceProject</key>
+		<string>openssl</string>
+		<key>OpenSourceURL</key>
+		<string>http://www.openssl.org/source/openssl-0.9.6.tar.gz</string>
+		<key>OpenSourceVersion</key>
+		<string>openssl-0.9.6</string>
+		<key>OpenSourceWebsiteURL</key>
+		<string>http://www.openssl.org/</string>
+	</dict>
+	<dict>
+		<key>OpenSourceImportDate</key>
+		<string>2004-04-07</string>
+		<key>OpenSourceLicense</key>
+		<string>other</string>
+		<key>OpenSourceLicenseFile</key>
+		<string>CommonCrypto.txt</string>
+		<key>OpenSourceModifications</key>
+		<string>Customization for OS X</string>
+		<key>OpenSourceProject</key>
+		<string>Gladman AES</string>
+		<key>OpenSourceURL</key>
+		<string>http://gladman.plushost.co.uk/oldsite/AES/aes-src-29-04-09.zip</string>
+		<key>OpenSourceVersion</key>
+		<string>aes-src-26-08-05</string>
+		<key>OpenSourceWebsiteURL</key>
+		<string>http://www.gladman.me.uk/</string>
+	</dict>
+	<dict>
+		<key>OpenSourceImportDate</key>
+		<string>2005-09-02</string>
+		<key>OpenSourceLicense</key>
+		<string>other</string>
+		<key>OpenSourceLicenseFile</key>
+		<string>CommonCrypto.txt</string>
+		<key>OpenSourceModifications</key>
+		<string>Customization for OS X</string>
+		<key>OpenSourceProject</key>
+		<string>Gladman SHA2</string>
+		<key>OpenSourceURL</key>
+		<string>http://gladman.plushost.co.uk/oldsite/cryptography_technology/sha/sha2-07-01-07.zip</string>
+		<key>OpenSourceVersion</key>
+		<string>sha-26-08-05</string>
+		<key>OpenSourceWebsiteURL</key>
+		<string>http://www.gladman.me.uk/</string>
+	</dict>
+	<dict>
+		<key>OpenSourceImportDate</key>
+		<string>2010-01-04</string>
+		<key>OpenSourceLicense</key>
+		<string>other</string>
+		<key>OpenSourceLicenseFile</key>
+		<string>CommonCrypto.txt</string>
+		<key>OpenSourceModifications</key>
+		<string>Branched for OS X</string>
+		<key>OpenSourceProject</key>
+		<string>libTomCrypt</string>
+		<key>OpenSourceURL</key>
+		<string>http://libtom.org/files/crypt-1.17.zip</string>
+		<key>OpenSourceVersion</key>
+		<string>1.17</string>
+		<key>OpenSourceWebsiteURL</key>
+		<string>http://libtom.org/</string>
+	</dict>
+</array>
+</plist>
