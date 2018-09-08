@@ -1,5 +1,5 @@
 build/
 .DS_Store
-objc.xcodeproj/project.xcworkspace/
-objc.xcodeproj/xcuserdata/
+CommonCrypto.xcodeproj/project.xcworkspace/xcuserdata/
+CommonCrypto.xcodeproj/xcuserdata/
 /darwinbuild.xcconfig
