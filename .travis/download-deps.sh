@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 MY_DIR=$(cd `dirname $0` && pwd)
 SRCROOT=$(dirname $MY_DIR)
 cd $SRCROOT
