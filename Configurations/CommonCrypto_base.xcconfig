@@ -80,10 +80,6 @@ OTHER_CODE_SIGN_FLAGS =
 // * Begin Compiler Section
 // **************************************************************************
 
-// Compiler version: I would LOVE to use CLANG but CLANG currently does
-// not support C++ very well
-GCC_VERSION = com.apple.compilers.llvmgcc42
-
 GCC_C_LANGUAGE_STANDARD = gnu99
 
 // Debugging information.  

@@ -151,13 +151,13 @@ CCSymmetricKeyWrap( CCWrappingAlgorithm algorithm,
 	
 	// allocate R
 	R = calloc(n, sizeof(uint64_t[2])); 
-    require_action(R, out, err = -1);
+    __Require_Action(R, out, err = -1);
     // don't wrap with something smaller
-    require_action(rawKeyLen >= kekLen, out, err = -1);
+    __Require_Action(rawKeyLen >= kekLen, out, err = -1);
     // kek multiple of 64 bits: 128, 192, 256
-    require_action(kekLen == 16 || kekLen == 24 || kekLen == 32, out, err = -1);
+    __Require_Action(kekLen == 16 || kekLen == 24 || kekLen == 32, out, err = -1);
     // wrapped_key_len 64 bits larger than key_len
-    require_action(wrappedKeyLen && (*wrappedKeyLen >= rawKeyLen + 64/8), out, err = -1);
+    __Require_Action(wrappedKeyLen && (*wrappedKeyLen >= rawKeyLen + 64/8), out, err = -1);
 
     // R[0][1] = P[0] ... R[1][n-1] = P[n-1]
     for (i = 0; i < n; i++)
@@ -170,7 +170,7 @@ CCSymmetricKeyWrap( CCWrappingAlgorithm algorithm,
     for (j = 0; j < 6; j++) {
         for (i = 0; i < n; i++)
         {
-            require_action(aes_operation(true, kek, kekLen, (uint8_t*)&R[i][0]), out, err = -1);
+            __Require_Action(aes_operation(true, kek, kekLen, (uint8_t*)&R[i][0]), out, err = -1);
             R[(i + 1) % n][0] = R[i][0] ^ _OSSwapInt64((n*j)+i+1);
         }
     }
@@ -201,11 +201,11 @@ CCSymmetricKeyUnwrap( CCWrappingAlgorithm algorithm,
 
 	// allocate R
 	R = calloc(n, sizeof(uint64_t[2])); 
-    require_action(R, out, err = -1);
+    __Require_Action(R, out, err = -1);
 	// kek multiple of 64 bits: 128, 192, 256
-    require_action(kekLen == 16 || kekLen == 32, out, err = -1);
+    __Require_Action(kekLen == 16 || kekLen == 32, out, err = -1);
     // wrapped_key_len 64 bits larger than key_len
-    require_action(rawKeyLen && (*rawKeyLen >= wrappedKeyLen - 64/8), out, err = -1);
+    __Require_Action(rawKeyLen && (*rawKeyLen >= wrappedKeyLen - 64/8), out, err = -1);
 
     // R[0][1] = C[0] ... R[1][n-1] = C[n-1]
     memcpy(&R[0][0], wrappedKey, 64/8); 
@@ -216,14 +216,14 @@ CCSymmetricKeyUnwrap( CCWrappingAlgorithm algorithm,
         for (i = n - 1; i >= 0; i--)
         {
            R[i][0] = R[(i + 1) % n][0] ^ _OSSwapInt64((n*j)+i+1);
-            require_action(aes_operation(false, kek, kekLen, (uint8_t*)&R[i][0]), out, err = -1);
+            __Require_Action(aes_operation(false, kek, kekLen, (uint8_t*)&R[i][0]), out, err = -1);
         }
     }
 
 	uint64_t kek_iv = pack64(iv, ivLen);
 
     // R[0][0] == iv?
-    require_action(R[0][0] == kek_iv, out, err = -1);
+    __Require_Action(R[0][0] == kek_iv, out, err = -1);
 
     // write output
     for (i = 0; i < n; i++)
