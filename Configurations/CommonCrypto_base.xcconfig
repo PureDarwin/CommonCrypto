@@ -239,3 +239,4 @@ PREBINDING = NO
 // * End Linker Section
 // **************************************************************************
 
+#include "../darwinbuild.xcconfig"
