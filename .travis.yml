@@ -1,0 +1,7 @@
+language: c
+os: osx
+xcode: xcode9.4
+
+script:
+- ./.travis/download-deps.sh
+- xcodebuild -project CommonCrypto.xcodeproj CODE_SIGN_IDENTITY=""
