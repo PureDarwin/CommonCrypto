@@ -1191,7 +1191,7 @@ void SHA1( int HASH[], int MESSAGE[] )
 #if	KERNEL
 #include <i386/cpu_capabilities.h>
 #else
-#include <System/i386/cpu_capabilities.h>
+#include <i386/cpu_capabilities.h>
 #endif
 
 	.text
